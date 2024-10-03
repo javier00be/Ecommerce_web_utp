@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordermod - Ropa Elegante</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#">Servicio al cliente</a></li>
+                    <li><a href="#">Ubícanos</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+            <nav class="user-actions">
+                <a href="#">Iniciar sesión</a>
+                <a href="#">Deseados</a>
+                <a href="#">Bolsa de compras</a>
+            </nav>
+        </div>
+        <div class="navbar">
+            <div class="logo">ORDERMOD <br><span>ROPA ELEGANTE</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+
+    <section class="content">
+        <aside class="filter">
+            <h2>Filtrar por</h2>
+            <div class="category">
+                <h3>Categoría</h3>
+                <ul>
+                    <li><a href="#">Todos</a></li>
+                    <li><a href="#">Poleras</a></li>
+                    <li><a href="#">Polos</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Jeans</a></li>
+                    <li><a href="#">Camisas</a></li>
+                    <li><a href="#">Casacas y abrigos</a></li>
+                    <li><a href="#">Básicos</a></li>
+                </ul>
+            </div>
+            <div class="price">
+                <h3>Precio</h3>
+                <input type="range" min="0" max="2000" value="1000">
+            </div>
+            <div class="size">
+                <h3>Talla</h3>
+                <ul>
+                    <li><label><input type="checkbox"> L</label></li>
+                    <li><label><input type="checkbox"> M</label></li>
+                    <li><label><input type="checkbox"> S</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="product-section">
+            <h2>Tendencias</h2>
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Casaca de gamuza">
+                    <p>Casaca de gamuza <br> S/. 185</p>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Casaca Regular Fit">
+                    <p>Casaca Regular Fit <br> S/. 185</p>
+                </div>
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Casaca de corduroy">
+                    <p>Casaca con cuello de corduroy <br> S/. 185</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+</body>
+</html>
