@@ -4,14 +4,16 @@ import { AppRoutingModule } from './app-routing.module';  // Importa tu AppRouti
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { LoginComponent } from './components/public/auth/login/login.component';
-import { AdminComponent } from './components/public/admin/admin.component'; // Asegúrate de que HomeComponent esté importado correctamente
+import { AdminComponent } from './components/public/admin/admin.component';
+import { ProductoComponent } from './components/public/admin/producto/producto.component'; // Asegúrate de que HomeComponent esté importado correctamente
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent, // Declara HomeComponent aquí
+    AdminComponent,
+    ProductoComponent, // Declara HomeComponent aquí
   ],
   imports: [
     BrowserModule,
