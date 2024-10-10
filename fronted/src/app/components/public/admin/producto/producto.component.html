@@ -1,56 +1,83 @@
-<div class="container">
-    <aside class="sidebar">
-        <div class="welcome">
-            <p>Bienvenido</p>
-            <h2>Jorge Castillo</h2>
-            <button class="logout">Cerrar Sesión</button>
-        </div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Ventas</a></li>
-                <li><a href="#">Usuario</a></li>
-                <li><a href="#">Ajustes</a></li>
-            </ul>
-        </nav>
-    </aside>
-    <main class="main-content">
-        <h1>Inicio / Productos</h1>
-        <div class="product-list">
-            <div class="product-card" *ngFor="let producto of productos">
-                <img [src]="producto.img" alt="{{ producto.nombre }}">
-                <p>{{ producto.nombre }}</p>
-                <span>${{ producto.precio }}</span>
-                <button (click)="actualizarProducto(producto)">Actualizar</button>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <div class="XD">
+        <div class="sidebar">
+            <div class="welcome">
+                <h2>Tienda</h2>
+                <!-- <button class="logout">Cerrar Sesión</button> -->
             </div>
-        </div>
-        <section class="create-product">
-            <h2>Crear Producto</h2>
-            <form (ngSubmit)="guardarProducto()">
-                <label for="product-name">Nombre del producto</label>
-                <input type="text" id="product-name" [(ngModel)]="nuevoProducto.nombre" name="nombre" required>
-                
-                <label for="price">Precio</label>
-                <input type="number" id="price" [(ngModel)]="nuevoProducto.precio" name="precio" required>
-                
-                <label for="brand">Marca</label>
-                <input type="text" id="brand" [(ngModel)]="nuevoProducto.marca" name="marca" required>
-                
-                <label for="gender">Género</label>
-                <input type="text" id="gender" [(ngModel)]="nuevoProducto.genero" name="genero" required>
-                
-                <label for="size">Talla</label>
-                <input type="text" id="size" [(ngModel)]="nuevoProducto.talla" name="talla" required>
-                
-                <label for="description">Descripción</label>
-                <textarea id="description" [(ngModel)]="nuevoProducto.descripcion" name="descripcion" rows="4" required></textarea>
-                
-                <label for="photo">Subir foto</label>
-                <input type="file" id="photo" (change)="onFileSelected($event)">
-                
-                <button type="submit">Guardar</button>
-            </form>
-        </section>
-    </main>
-</div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i> Productos</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Ventas</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Usuario</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i> Ajustes</a></li>
+                </ul>
+            </nav>
+        </div> <!-- TERMINA sidebar-->
+
+        <div class="main-content">
+            <div class="incioproducto">
+                <h1>Inicio / Productos</h1>
+            </div>
+            
+            <div class="formuyimagen">
+                <div class="product-list">
+
+                    <div class="product-card" *ngFor="let producto of productos">
+                        <img [src]="producto.img" alt="Imagen del producto">
+                        <p>{{ producto.nombre }}</p>
+                        <span>{{ producto.precio }}</span>
+                        <div class="buttons">
+                            <button>Actualizar</button>
+                            <button>🗑️</button> <!-- Botón para eliminar -->
+                        </div>
+                    </div> <!-- product-card -->
+                </div>
+    
+                <!-- Sección del formulario para crear productos -->
+                <div class="creacion-producto">
+                    <h3>Crear Producto</h3>
+                    <form>
+                        <label for="nombre">Nombre del producto</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre del producto">
+                        <div class = "twoform">
+                            <div class="oneform">
+                                <label for="precio">Precio</label>
+                                <input type="number" id="precio" name="precio" placeholder="Precio">
+                            </div>
+                            <div class="oneform">
+                                <label for="marca">Marca</label>
+                                <input type="text" id="marca" name="marca" placeholder="Marca">
+                            </div> <!-- oneform -->
+                        </div> <!-- twoform -->
+                        <div class = "twoform">
+                            <div class="oneform">
+                                <label for="genero">Género</label>
+                                <input type="text" id="genero" name="genero" placeholder="Género">
+                            </div>
+                            <div class="oneform">
+                                <label for="talla">Talla</label>
+                                <input type="text" id="talla" name="talla" placeholder="Talla">
+                            </div> <!-- oneform -->
+                        </div> <!-- twoform -->
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" placeholder="Descripción"></textarea>
+        
+                        <label for="foto">Subir foto</label>
+                        <input type="file" id="foto" name="foto">
+
+                        <div class="buttonform">
+                            <button type="submit">Guardar</button>
+                        </div> <!-- buttonform -->                 
+                    </form>
+                </div> <!-- termina creacion-producto -->
+            </div> <!-- formuyimagen -->
+
+        </div><!--  main-content -->
+    </div> <!-- TERMINA XD-->
+</body>
+    
+  

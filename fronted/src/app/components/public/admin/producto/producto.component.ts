@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 
 export class ProductosComponent {
   productos = [
-    { img: 'assets/img/product1.jpg', nombre: 'Casaca Regular Fit', precio: 135 },
-    { img: 'assets/img/product2.jpg', nombre: 'Casaca Regular Fit', precio: 139 },
-    { img: 'assets/img/product3.jpg', nombre: 'Casaca Regular Fit', precio: 135 },
-    { img: 'assets/img/product4.jpg', nombre: 'Casaca Regular Fit', precio: 135 }
+    { img: 'https://static.zara.net/assets/public/b5a6/7952/ea134fce8608/e5419caba234/04344351707-e2/04344351707-e2.jpg?ts=1727684965262&w=292&f=auto', nombre: 'Camisa', precio: 70 },
+    { img: 'https://www.projectpieta.com/wp-content/uploads/2022/02/polos.jpg', nombre: 'Polo', precio: 139 },
+    { img: 'https://ikual.pe/cdn/shop/products/IKUBPCCRMPMAXXENEGR-BASIC_20MUJER-2023_1_M.jpg?v=1688834088', nombre: 'Polo Negro', precio: 135 },
+    { img: 'https://plazavea.vteximg.com.br/arquivos/ids/26158862-512-512/20268940.jpg', nombre: 'Jeans azules', precio: 88 }
   ];
 
   nuevoProducto = {

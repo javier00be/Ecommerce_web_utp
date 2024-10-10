@@ -7,7 +7,8 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { AdminComponent } from './components/admin/admin.component'; // Asegúrate de que HomeComponent esté importado correctamente
 import { RegistroComponent } from './components/auth/registro/registro.component';
 import { FormsModule } from '@angular/forms';
-
+// IMPORTA ProductosComponent
+import { ProductosComponent } from './components/public/admin/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     AdminComponent,
     RegistroComponent, // Declara HomeComponent aquí
+    ProductosComponent,
   ],
   imports: [
     BrowserModule,
