@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-productos',
-  templateUrl: './productos.component.html',
-  styleUrls: ['./productos.component.css']
+  templateUrl: './producto.component.html',
+  styleUrls: ['./producto.component.css']
 })
+
 export class ProductosComponent {
   productos = [
     { img: 'assets/img/product1.jpg', nombre: 'Casaca Regular Fit', precio: 135 },
