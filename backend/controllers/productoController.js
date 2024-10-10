@@ -38,5 +38,23 @@ async function insertarProducto(req, res) {
     }
 }
 
+// Función para obtener todos los productos
+async function obtenerProductos(req, res) {
+    try {
+        // Obtener todos los productos de la base de datos
+        const productos = await ProductoModel.find();
+        return res.status(200).json({
+            message: 'Productos obtenidos correctamente',
+            data: productos
+        });
+    } catch (error) {
+        // Manejar errores y enviar respuesta con error
+        return res.status(500).json({
+            message: 'Error al obtener los productos',
+            error: error.message
+        });
+    }
+}
+
 // Exportar la función para usarla en otros archivos
-module.exports = { insertarProducto };
+module.exports = { insertarProducto, obtenerProductos };
